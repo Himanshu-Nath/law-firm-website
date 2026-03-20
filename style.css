@@ -1,0 +1,301 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #0b1c2c;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 10px; */
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px 10px 0 0;
+    font-size: 14px;
+    /* margin: 0; */
+  }
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  position: relative;
+  background: url('images/law_firm_thumnail_files.jpg') center/cover no-repeat;
+  height: 200px;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    left: 20px;
+    right: 20px;
+    top: 30px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+
+section {
+  padding: 60px 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 20px;
+  }
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #0b1c2c;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 6px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background: #0b1c2c;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+}
+
+footer {
+  background: #0b1c2c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* about us page */
+
+/* ashish image on ashish page */
+.profile-photo {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .profile-photo img {
+    max-width: 160px;
+  }
+}
+
+/* Ashish html page start */
+.profile-img {
+  width: 120px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.profile-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 40px;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-header h2 {
+  font-size: 36px;
+  color: #0b1c2c;
+  margin-bottom: 10px;
+}
+
+.designation {
+  font-size: 18px;
+  color: #777;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
+/* Left side boxes */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-box {
+  background: #f9fafc;
+  padding: 20px;
+  border-left: 4px solid #0b1c2c;
+  border-radius: 6px;
+}
+
+.info-box h4 {
+  margin-bottom: 10px;
+  color: #0b1c2c;
+}
+
+/* Right content */
+.profile-content p {
+  margin-bottom: 18px;
+  font-size: 15.5px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Recognition Section */
+.recognition-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.recognition-section h3 {
+  color: #0b1c2c;
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.recognition-card {
+  background: #f9fafc;
+  border-left: 4px solid #0b1c2c;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.recognition-card h4 {
+  color: #0b1c2c;
+  margin-bottom: 10px;
+}
+
+.recognition-card p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .recognition-section h3 {
+    font-size: 24px;
+  }
+
+  .recognition-card {
+    padding: 15px;
+  }
+}
+
+/* Ashish html page ends */
